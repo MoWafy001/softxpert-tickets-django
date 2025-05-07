@@ -1,0 +1,50 @@
+version: '3.8'
+
+volumes:
+  postgres_data:
+  static_volume:
+
+services:
+  db:
+    image: postgres:14
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=support_system_db
+      - POSTGRES_USER=sys_admin
+      - POSTGRES_PASSWORD=nimda_sys
+
+  web:
+    build: .
+    command: >
+      sh -c "python manage.py makemigrations tickets &&
+             python manage.py migrate &&
+             gunicorn --bind 0.0.0.0:8000 support_system.wsgi:application"
+    depends_on:
+      - db
+    volumes:
+      - static_volume:/app/staticfiles/
+    environment:
+      - DB_ENGINE=postgresql
+      - DB_NAME=support_system_db
+      - DB_USER=sys_admin
+      - DB_PASSWORD=nimda_sys
+      - DB_HOST=db
+      - DB_PORT=5432
+      - STATIC_ROOT=/staticfiles/
+      - STATIC_URL=/static/
+      - SECRET_KEY="django-insecure-&**q==jwjqna^*w^@rfxy315jd(p41#29j@h2&kjv_l$(bciej"
+      - DEBUG=false
+      - ENV=prod
+      - ALLOWED_HOSTS=localhost,127.0.0.1,web
+      - CORS_ALLOWED_ORIGINS=http://localhost:8000,http://localhost:8000
+
+  nginx:
+      image: nginx:latest
+      ports:
+        - "8000:8000"
+      volumes:
+        - static_volume:/app/staticfiles
+        - ./config/nginx.conf:/etc/nginx/nginx.conf
+      depends_on:
+        - web

@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from common.env import Env
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,16 +24,25 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&**q==jwjqna^*w^@rfxy315jd(p41#29j@h2&kjv_l$(bciej'
+# SECRET_KEY = 'django-insecure-&**q==jwjqna^*w^@rfxy315jd(p41#29j@h2&kjv_l$(bciej'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+ENV: str = Env.get("ENV", "dev").to_str()
 
-ALLOWED_HOSTS = []
+DEBUG = Env.get("DEBUG", "true").to_bool()
 
+if(ENV == "dev"):
+    DEBUG = True
+
+if(DEBUG):
+    SECRET_KEY = Env.get("SECRET_KEY", "django-insecure-&**q==jwjqna^*w^@rfxy315jd(p41#29j@h2&kjv_l$(bciej").to_str()
+else:
+    SECRET_KEY = Env.get("SECRET_KEY").required().to_str()
+
+ALLOWED_HOSTS = Env.get("ALLOWED_HOSTS", "127.0.0.1,localhost").to_list(separator=",")
+CSRF_TRUSTED_ORIGINS = Env.get("CSRF_TRUSTED_ORIGINS", "http://127.0.0.1:8000,http://localhost:8000").to_list(separator=",")
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -73,11 +86,26 @@ WSGI_APPLICATION = 'support_system.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+DB_ENGINE: str = Env.get("DB_ENGINE", "sqlite3").to_str()
+DB_NAME: str = Env.get("DB_NAME", BASE_DIR / "db.sqlite3").to_str()
+DB_USER: str = Env.get("DB_USER").to_str()
+DB_PASSWORD: str = Env.get("DB_PASSWORD").to_str()
+DB_HOST: str = Env.get("DB_HOST", "127.0.0.1").to_str()
+DB_PORT: str = Env.get("DB_PORT").to_int()
+
+db_config = {
+    'ENGINE': f'django.db.backends.{DB_ENGINE}',
+    'NAME': DB_NAME,
+    "USER": DB_USER,
+    "PASSWORD": DB_PASSWORD,
+    "HOST": DB_HOST,
+    "PORT": DB_PORT,
+}
+# delete None values
+db_config = {k: v for k, v in db_config.items() if v is not None}
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': db_config
 }
 
 
@@ -115,7 +143,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = Env.get("STATIC_URL", "static/").to_str()
+
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = Env.get("STATIC_ROOT", BASE_DIR / "staticfiles").to_str()
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
