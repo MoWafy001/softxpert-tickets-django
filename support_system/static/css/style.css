@@ -1,0 +1,5 @@
+/* styles to override the default bootstrap styles */
+
+body {
+    background-color: #f8f9fa;
+}

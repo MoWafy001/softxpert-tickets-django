@@ -18,6 +18,7 @@ load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+PROJECT_DIR = BASE_DIR / "support_system"
 
 
 # Quick-start development settings - unsuitable for production
@@ -53,6 +54,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'tickets',
     'users',
+    'admin_console',
 ]
 
 MIDDLEWARE = [
@@ -71,7 +73,9 @@ AUTH_USER_MODEL = "users.User"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            PROJECT_DIR / "templates",
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -158,9 +162,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = Env.get("STATIC_URL", "static/").to_str()
-
-# STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_ROOT = Env.get("STATIC_ROOT", BASE_DIR / "staticfiles").to_str()
+STATICFILES_DIRS = [
+    PROJECT_DIR / "static",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

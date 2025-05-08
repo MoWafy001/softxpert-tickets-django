@@ -40,3 +40,45 @@ class User(AbstractBaseUser):
 
     class Meta:
         db_table = 'users'
+
+class UserRoleManager(models.Manager):
+    def __init__(self, role: Role):
+        super().__init__()
+        self.role = role
+
+    def get_queryset(self):
+        return super().get_queryset().filter(role=self.role)
+
+class Admin(User):
+    class Meta:
+        proxy = True
+
+    objects = UserRoleManager(Role.ADMIN)
+    def __str__(self):
+        return f"Admin: {self.username}"
+    def __repr__(self):
+        return f"Admin(id={self.id}, username={self.username}, name={self.name})"
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.role = Role.ADMIN
+    def __new__(cls, *args, **kwargs):
+        instance = super().__new__(cls)
+        instance.role = Role.ADMIN
+        return instance
+
+class SupportAgent(User):
+    class Meta:
+        proxy = True
+
+    objects = UserRoleManager(Role.SUPPORT_AGENT)
+    def __str__(self):
+        return f"SupportAgent: {self.username}"
+    def __repr__(self):
+        return f"SupportAgent(id={self.id}, username={self.username}, name={self.name})"
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.role = Role.SUPPORT_AGENT
+    def __new__(cls, *args, **kwargs):
+        instance = super().__new__(cls)
+        instance.role = Role.SUPPORT_AGENT
+        return instance
