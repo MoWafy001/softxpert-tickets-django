@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'tickets',
     'users',
     'admin_console',
+    'customers',
 ]
 
 MIDDLEWARE = [
