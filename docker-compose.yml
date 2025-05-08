@@ -17,8 +17,7 @@ services:
   web:
     build: .
     command: >
-      sh -c "python manage.py makemigrations tickets &&
-             python manage.py migrate &&
+      sh -c "python manage.py migrate &&
              python manage.py collectstatic --noinput &&
              gunicorn --bind 0.0.0.0:8000 support_system.wsgi:application"
     depends_on:

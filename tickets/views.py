@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import JsonResponse
 
-# Create your views here.
-def index(request):
-    return HttpResponse("Hello, world. You're at the tickets index.")
+def handler404(request, exception):
+    return JsonResponse({"error": "Not Found", "message": "The requested resource was not found."}, status=404)
+
+def handle500(request):
+    return JsonResponse({"error": "Server Error", "message": "An internal server error occurred."}, status=500)

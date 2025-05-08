@@ -17,6 +17,9 @@ class UserManager(models.Manager):
 
         return self.create_user(username, password, **extra_fields)
 
+    def get_by_natural_key(self, username):
+        return self.get(username=username)
+
 class User(AbstractBaseUser):
     id = models.AutoField(primary_key=True)
     username = models.CharField(max_length=150, unique=True)
