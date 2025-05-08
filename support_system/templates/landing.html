@@ -3,14 +3,12 @@
 {% block title %}Support System{% endblock %}
 {% block content %}
     <div class="container">
-        <h1>Welcome to the Support System</h1>
-        <p>Use the navigation menu to manage your tickets.</p>
-        <nav>
-            <ul>
-                <li><a href="">View Tickets</a></li>
-                <li><a href="">Create Ticket</a></li>
-                <li><a href="">Search Tickets</a></li>
-            </ul>
-        </nav>
+        <h1 class="text-center mt-5">Welcome to the Support System</h1>
+        <!-- big flashing login button -->
+        <div class="alert alert-info text-center mt-5">
+            <h2>Ready to get started?</h2>
+            <p>Click the button below to login.</p>
+            <a href="/login" class="btn btn-primary btn-lg">Login</a>
+        </div>
     </div>
 {% endblock %}
