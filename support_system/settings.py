@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 from common.env import Env
 from dotenv import load_dotenv
+from pprint import pprint
 
 load_dotenv()
 
@@ -115,6 +116,7 @@ db_config = {
     "HOST": DB_HOST,
     "PORT": DB_PORT,
 }
+pprint(f"DB_CONFIG: {db_config}")
 # delete None values
 db_config = {k: v for k, v in db_config.items() if v is not None}
 

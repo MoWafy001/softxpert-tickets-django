@@ -1,5 +1,3 @@
-version: '3.8'
-
 volumes:
   postgres_data:
   static_volume:
@@ -11,8 +9,13 @@ services:
       - postgres_data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=support_system_db
-      - POSTGRES_USER=sys_admin
-      - POSTGRES_PASSWORD=nimda_sys
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   web:
     build: .
@@ -21,14 +24,15 @@ services:
              python manage.py collectstatic --noinput &&
              gunicorn --bind 0.0.0.0:8000 support_system.wsgi:application"
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     volumes:
       - static_volume:/app/staticfiles/
     environment:
       - DB_ENGINE=postgresql
       - DB_NAME=support_system_db
-      - DB_USER=sys_admin
-      - DB_PASSWORD=nimda_sys
+      - DB_USER=admin
+      - DB_PASSWORD=admin
       - DB_HOST=db
       - DB_PORT=5432
       - STATIC_ROOT=/app/staticfiles/

@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('username', models.CharField(max_length=150, unique=True)),
                 ('password', models.CharField(max_length=128)),
                 ('name', models.CharField(max_length=150)),
-                ('role', models.CharField(choices=[(users.enums.Role['ADMIN'], 'Admin'), (users.enums.Role['SUPPORT_AGENT'], 'Support Agent')], max_length=50)),
+                ('role', models.CharField(choices=[(users.enums.Role.ADMIN.value, 'Admin'), (users.enums.Role.SUPPORT_AGENT.value, 'Support Agent')], max_length=50)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
             ],
