@@ -1,5 +1,6 @@
 from django.core.management.base import BaseCommand
 from users.models import User, Admin, SupportAgent
+from customers.models import Customer
 
 class Command(BaseCommand):
     help = "Seed the database with mock data for all models"
@@ -7,6 +8,7 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         # clear db
         User.objects.all().delete()
+        Customer.objects.all().delete()
 
         # Seed 5 admins
         for _ in range(1,6):
@@ -27,5 +29,14 @@ class Command(BaseCommand):
             )
             self.stdout.write(self.style.SUCCESS(f"Support Agent {support_agent.username} created."))
         self.stdout.write(self.style.SUCCESS("5 Support Agents created."))
+
+        # Seed 5 customers
+        for _ in range(1,6):
+            customer = Customer.objects.create_customer(
+                name=f"Customer {_}",
+                email=f"custtomer-{_}@app.com",
+            )
+            self.stdout.write(self.style.SUCCESS(f"Customer {customer.name} created."))
+        self.stdout.write(self.style.SUCCESS("5 Customers created."))
 
         self.stdout.write(self.style.SUCCESS("Database seeded successfully!"))
