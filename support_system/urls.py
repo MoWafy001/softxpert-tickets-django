@@ -19,6 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     path("auth/", include("users.auth_urls"), name="users_auth"),
     path("admin/", include("admin_console.urls"), name="admin_console"),
+    path("agents/", include("agents_console.urls"), name="agents_console"),
 ]
 
 handler404 = "tickets.views.handler404"

@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'users',
     'admin_console',
     'customers',
+    'agents_console',
 ]
 
 MIDDLEWARE = [
