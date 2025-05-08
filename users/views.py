@@ -40,6 +40,7 @@ def get_profile(request):
     return JsonResponse(profile_data, status=200)
 
 
+@csrf_exempt
 @login_required
 def logout_view(request):
     logout(request)
