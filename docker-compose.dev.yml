@@ -14,6 +14,18 @@ services:
       - POSTGRES_USER=sys_admin
       - POSTGRES_PASSWORD=nimda_sys
 
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 15433:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@app.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    depends_on:
+      - db
+    volumes:
+      - ./config/pgadmin-servers.json:/pgadmin4/servers.json
+
   web:
     build: .
     command: >
