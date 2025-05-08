@@ -7,7 +7,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import action
 from rest_framework.views import APIView
 from rest_framework.authentication import SessionAuthentication
-from common.csrf_except_ession_authentication import CsrfExemptSessionAuthentication
+from common.csrf_except_session_authentication import CsrfExemptSessionAuthentication
 
 
 class CustomerViewSet(APIView):
