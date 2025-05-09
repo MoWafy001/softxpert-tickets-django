@@ -30,7 +30,7 @@
 ### Docker
 The easiest and fastest way is using docker. All you need is to have docker installed on your machine.
 
-For development, you `docker-compose.dev.yml` file. If you just want to run the app, you can use `docker-compose.yml` file.
+For development, use `docker-compose.dev.yml`. If you just want to run the app, you can use `docker-compose.yml`.
 
 
 `for development:`
@@ -51,7 +51,7 @@ docker compose up --build
 You can access the app on `http://localhost:8000` and pgAdmin on `http://localhost:15433` *(if you are running `docker-compose.dev.yml`)*.
 
 The default credentials for pgAdmin are:
-- email: `admin@admin.com`
+- email: `admin@app.com`
 - password: `admin`
 
 ### Python
@@ -76,12 +76,13 @@ copy .env.example .env
 cp .env.example .env
 
 # run the migrations
-python manage.py db migrate
+python manage.py migrate
 
 # run the application
 python manage.py runserver
 ```
-if you use the example `.env` file. You will be using a SQLLite database. Keep in mind that table row locking will not work with SQLLite. You can use PostgreSQL or MySQL instead. Change the database configuration in the `.env` file to use PostgreSQL or MySQL.
+
+if you use the example `.env` file. You will be using a SQLite database. Keep in mind that table row locking will not work with SQLite. You can use PostgreSQL or MySQL instead. Change the database configuration in the `.env` file to use PostgreSQL or MySQL.
 
 ## Tests
 You can run the tests using the `test` command. 
