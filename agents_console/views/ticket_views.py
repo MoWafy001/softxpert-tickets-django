@@ -44,7 +44,7 @@ class TicketViewSet(APIView):
                             Ticket.objects.filter(assigned_to=None)
                             .order_by("created_at")
                             .select_for_update(
-                                skip_locked=False
+                                skip_locked=True
                             )[:no_tickets_to_assign]
                         )
                         for ticket in unassigned_tickets:
