@@ -8,6 +8,7 @@ from rest_framework.decorators import action
 from rest_framework.views import APIView
 from rest_framework.authentication import SessionAuthentication
 from common.csrf_except_session_authentication import CsrfExemptSessionAuthentication
+from users.permissions import IsAdmin
 
 
 class CustomerViewSet(APIView):
@@ -16,7 +17,7 @@ class CustomerViewSet(APIView):
     """
 
     authentication_classes = (CsrfExemptSessionAuthentication, SessionAuthentication)
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, IsAdmin]
 
     @action(detail=False, methods=["post"])
     def post(self, request):
@@ -63,7 +64,7 @@ class CustomerByIdViewSet(APIView):
     """
 
     authentication_classes = (CsrfExemptSessionAuthentication, SessionAuthentication)
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, IsAdmin]
 
     @action(detail=False, methods=["get"])
     def get(self, request, customer_id=None):

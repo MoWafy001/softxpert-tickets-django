@@ -9,6 +9,7 @@ from rest_framework.decorators import action
 from rest_framework.views import APIView
 from rest_framework.authentication import SessionAuthentication
 from common.csrf_except_session_authentication import CsrfExemptSessionAuthentication
+from users.permissions import IsAgent
 
 
 class TicketViewSet(APIView):
@@ -17,7 +18,7 @@ class TicketViewSet(APIView):
     """
 
     authentication_classes = (CsrfExemptSessionAuthentication, SessionAuthentication)
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, IsAgent]
         
     
     @action(detail=False, methods=["get"])
@@ -52,7 +53,7 @@ class TicketByIdViewSet(APIView):
     """
 
     authentication_classes = (CsrfExemptSessionAuthentication, SessionAuthentication)
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, IsAgent]
 
     @action(detail=False, methods=["get"])
     def get(self, request, ticket_id=None):
@@ -83,7 +84,7 @@ class SellTicketViewSet(APIView):
     """
 
     authentication_classes = (CsrfExemptSessionAuthentication, SessionAuthentication)
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, IsAgent]
 
     @action(detail=False, methods=["post"])
     def post(self, request, ticket_id=None):
