@@ -25,7 +25,7 @@ class CustomerViewSet(APIView):
         Create a new customer.
         """
         if request.method != "POST":
-            return DataJsonResponse("Invalid request method", status=405)
+            return ErrorJsonResponse("Invalid request method", status=405)
 
         try:
             data = request.data
@@ -33,7 +33,7 @@ class CustomerViewSet(APIView):
             email = data.get("email")
 
             if not name or not email:
-                return DataJsonResponse({"error": "name and email are required"}, status=400)
+                return ErrorJsonResponse({"error": "name and email are required"}, status=400)
 
             customer = Customer.objects.create(name=name, email=email)
             return DataJsonResponse({"message": "Customer created successfully", "customer_id": customer.id}, status=201)
@@ -53,6 +53,8 @@ class CustomerViewSet(APIView):
                 "id": customer.id,
                 "name": customer.name,
                 "email": customer.email,
+                "created_at": customer.created_at,
+                "updated_at": customer.updated_at,
             }
             for customer in customers
         ]
@@ -77,6 +79,8 @@ class CustomerByIdViewSet(APIView):
                 "id": customer.id,
                 "name": customer.name,
                 "email": customer.email,
+                "created_at": customer.created_at,
+                "updated_at": customer.updated_at,
             }
             return DataJsonResponse(customer_data)
 

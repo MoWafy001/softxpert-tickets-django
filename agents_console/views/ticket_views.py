@@ -10,7 +10,10 @@ from rest_framework.views import APIView
 from rest_framework.authentication import SessionAuthentication
 from common.csrf_except_session_authentication import CsrfExemptSessionAuthentication
 from users.permissions import IsAgent
-from django.db import transaction
+from django.db import transaction, DatabaseError
+import time
+
+MAX_RETRIES = 3
 
 
 class TicketViewSet(APIView):
@@ -31,28 +34,40 @@ class TicketViewSet(APIView):
         if not user.is_authenticated:
             return ErrorJsonResponse("User not authenticated", status=401)
 
-        no_tickets_assigned_to_agent = Ticket.objects.filter(assigned_to=user).count()
-        no_tickets_to_assign = 15 - no_tickets_assigned_to_agent
+        # retry incase of database error because of deadlock
+        retries = 0
+        while retries < MAX_RETRIES:
+            try:
+                with transaction.atomic():
+                    no_tickets_assigned_to_agent = Ticket.objects.filter(assigned_to=user).count()
+                    no_tickets_to_assign = 15 - no_tickets_assigned_to_agent
+                    if no_tickets_to_assign > 0:
+                        unassigned_tickets = (
+                            Ticket.objects.filter(assigned_to=None)
+                            .order_by("created_at")
+                            .select_for_update()[:no_tickets_to_assign]
+                        )
+                        for ticket in unassigned_tickets:
+                            ticket.assigned_to = user
+                            ticket.save()
 
-        # using atomic transaction to ensure that the tickets are assigned in a single transaction
-        # and locking the tickets to prevent being assigned to multiple agents at the same time
-        if no_tickets_to_assign > 0:
-            with transaction.atomic():
-                tickets_to_assign = Ticket.objects.filter(assigned_to=None, sold_to=None).order_by("created_at")[:no_tickets_to_assign]
-                for ticket in tickets_to_assign:
-                    ticket.assigned_to = user
-                    ticket.save()
+                # Retrieve all tickets assigned to the user
+                tickets = Ticket.objects.filter(assigned_to=user).order_by("created_at")
+                tickets_list = [
+                    {
+                        "id": ticket.id,
+                        "title": ticket.title,
+                        "description": ticket.description,
+                    }
+                    for ticket in tickets
+                ]
+                return DataJsonResponse(tickets_list)
 
-        tickets = Ticket.objects.filter(assigned_to=user).order_by("created_at")
-        tickets_list = [
-            {
-                "id": ticket.id,
-                "title": ticket.title,
-                "description": ticket.description,
-            }
-            for ticket in tickets
-        ]
-        return DataJsonResponse(tickets_list)
+            except DatabaseError:
+                retries += 1
+                time.sleep(1)  # Wait before retrying
+
+        return ErrorJsonResponse("Could not assign tickets due to a database error", status=500)
 
 
 class TicketByIdViewSet(APIView):

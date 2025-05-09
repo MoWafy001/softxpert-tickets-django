@@ -17,9 +17,9 @@ Including another URLconf
 from django.urls import path, include
 
 urlpatterns = [
-    path("auth/", include("users.auth_urls"), name="users_auth"),
-    path("admin/", include("admin_console.urls"), name="admin_console"),
-    path("agents/", include("agents_console.urls"), name="agents_console"),
+    path("auth/", include("users.auth_urls", namespace="auth"), name="users-auth"),
+    path("admin/", include("admin_console.urls", namespace="admin-console"), name="admin-console"),
+    path("agents/", include("agents_console.urls", namespace="agents-console"), name="agents-console"),
 ]
 
 handler404 = "tickets.views.handler404"
