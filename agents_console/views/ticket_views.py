@@ -41,7 +41,7 @@ class TicketViewSet(APIView):
                     no_tickets_to_assign = 15 - no_tickets_assigned_to_agent
                     if no_tickets_to_assign > 0:
                         unassigned_tickets = (
-                            Ticket.objects.filter(assigned_to=None)
+                            Ticket.objects.filter(assigned_to=None, sold_to=None)
                             .order_by("created_at")
                             .select_for_update(
                                 skip_locked=True

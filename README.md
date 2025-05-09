@@ -35,15 +35,13 @@ For development, use `docker-compose.dev.yml`. If you just want to run the app, 
 
 `for development:`
 ```bash
-# includes volumes to persist PostgreSQL data
-# and a bind mount to watch for changes in the code
+# includes a bind mount to watch for changes in the code
 # and includes pgAdmin running on port 15433
 docker compose -f docker-compose.dev.yml up --build
 ```
 
 `for just running the app:`
 ```bash
-# data is lost when the container is stopped
 # the database is automatically seeded so you can test the endpoints
 docker compose up --build
 ```
