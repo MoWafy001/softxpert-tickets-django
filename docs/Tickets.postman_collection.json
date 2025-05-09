@@ -1,0 +1,2137 @@
+{
+	"info": {
+		"_postman_id": "752bc2ce-3a2d-4876-ae75-6b26933ebb12",
+		"name": "Tickets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27555190"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"support_agent1\",\n    \"password\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/auth/login/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login Agent",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"support_agent1\",\n    \"password\": \"123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/auth/login/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"auth",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.27.5"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 May 2025 01:21:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "sessionid=nhr44pnfj2z6h41yu8pb1g7x2t3wa5ln; expires=Fri, 23 May 2025 01:21:27 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Login successful\",\n    \"username\": \"support_agent1\"\n}"
+						},
+						{
+							"name": "Login Admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"admin1\",\n    \"password\": \"123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/auth/login/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"auth",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.27.5"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 May 2025 06:10:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "sessionid=olqtgf97p8i3txzmd3hoh9uvbc6jjdwc; expires=Fri, 23 May 2025 06:10:45 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Login successful\",\n    \"username\": \"admin1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/auth/profile/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"auth",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/auth/profile/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"auth",
+										"profile",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.27.5"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 May 2025 01:09:54 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "82"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"support_agent1\",\n    \"name\": \"Support Agent 1\",\n    \"role\": \"support-agent\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/auth/logout/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"auth",
+								"logout",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{server}}/auth/logout/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"auth",
+										"logout",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.27.5"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 May 2025 06:04:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "sessionid=\"\"; expires=Thu, 01 Jan 1970 00:00:00 GMT; Max-Age=0; Path=/; SameSite=Lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Logout successful\"\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Customers",
+					"item": [
+						{
+							"name": "List Customers",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{server}}/admin/customers/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"admin",
+										"customers",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthenticated",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-CSRFToken",
+												"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{server}}/admin/customers/",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"admin",
+												"customers",
+												""
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.27.5"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 06:05:06 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "58"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+								},
+								{
+									"name": "List Customers",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-CSRFToken",
+												"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{server}}/admin/customers/",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"admin",
+												"customers",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.27.5"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 06:11:02 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2259"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 27,\n            \"name\": \"Customer 1\",\n            \"email\": \"custtomer-1@app.com\",\n            \"created_at\": \"2025-05-09T01:21:10.828\",\n            \"updated_at\": \"2025-05-09T01:21:10.828\"\n        },\n        {\n            \"id\": 28,\n            \"name\": \"Customer 2\",\n            \"email\": \"custtomer-2@app.com\",\n            \"created_at\": \"2025-05-09T01:21:10.829\",\n            \"updated_at\": \"2025-05-09T01:21:10.829\"\n        },\n        {\n            \"id\": 29,\n            \"name\": \"Customer 3\",\n            \"email\": \"custtomer-3@app.com\",\n            \"created_at\": \"2025-05-09T01:21:10.829\",\n            \"updated_at\": \"2025-05-09T01:21:10.829\"\n        },\n        {\n            \"id\": 30,\n            \"name\": \"Customer 4\",\n            \"email\": \"custtomer-4@app.com\",\n            \"created_at\": \"2025-05-09T01:21:10.830\",\n            \"updated_at\": \"2025-05-09T01:21:10.830\"\n        },\n        {\n            \"id\": 31,\n            \"name\": \"Customer 5\",\n            \"email\": \"custtomer-5@app.com\",\n            \"created_at\": \"2025-05-09T01:21:10.831\",\n            \"updated_at\": \"2025-05-09T01:21:10.831\"\n        },\n        {\n            \"id\": 32,\n            \"name\": \"Customer 6\",\n            \"email\": \"custtomer-6@app.com\",\n            \"created_at\": \"2025-05-09T01:21:10.831\",\n            \"updated_at\": \"2025-05-09T01:21:10.831\"\n        },\n        {\n            \"id\": 33,\n            \"name\": \"Customer 7\",\n            \"email\": \"custtomer-7@app.com\",\n            \"created_at\": \"2025-05-09T01:21:10.832\",\n            \"updated_at\": \"2025-05-09T01:21:10.832\"\n        },\n        {\n            \"id\": 34,\n            \"name\": \"Customer 8\",\n            \"email\": \"custtomer-8@app.com\",\n            \"created_at\": \"2025-05-09T01:21:10.832\",\n            \"updated_at\": \"2025-05-09T01:21:10.832\"\n        },\n        {\n            \"id\": 35,\n            \"name\": \"Customer 9\",\n            \"email\": \"custtomer-9@app.com\",\n            \"created_at\": \"2025-05-09T01:21:10.833\",\n            \"updated_at\": \"2025-05-09T01:21:10.833\"\n        },\n        {\n            \"id\": 36,\n            \"name\": \"Customer 10\",\n            \"email\": \"custtomer-10@app.com\",\n            \"created_at\": \"2025-05-09T01:21:10.833\",\n            \"updated_at\": \"2025-05-09T01:21:10.833\"\n        },\n        {\n            \"id\": 37,\n            \"name\": \"Customer 11\",\n            \"email\": \"custtomer-11@app.com\",\n            \"created_at\": \"2025-05-09T01:21:10.834\",\n            \"updated_at\": \"2025-05-09T01:21:10.834\"\n        },\n        {\n            \"id\": 38,\n            \"name\": \"Customer 12\",\n            \"email\": \"custtomer-12@app.com\",\n            \"created_at\": \"2025-05-09T01:21:10.835\",\n            \"updated_at\": \"2025-05-09T01:21:10.835\"\n        },\n        {\n            \"id\": 39,\n            \"name\": \"Customer 13\",\n            \"email\": \"custtomer-13@app.com\",\n            \"created_at\": \"2025-05-09T01:21:10.836\",\n            \"updated_at\": \"2025-05-09T01:21:10.836\"\n        },\n        {\n            \"id\": 40,\n            \"name\": \"Customer 14\",\n            \"email\": \"custtomer-14@app.com\",\n            \"created_at\": \"2025-05-09T01:21:10.836\",\n            \"updated_at\": \"2025-05-09T01:21:10.836\"\n        },\n        {\n            \"id\": 41,\n            \"name\": \"Customer 15\",\n            \"email\": \"custtomer-15@app.com\",\n            \"created_at\": \"2025-05-09T01:21:10.837\",\n            \"updated_at\": \"2025-05-09T01:21:10.838\"\n        }\n    ],\n    \"message\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "get by id",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{server}}/admin/customers/:id/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"admin",
+										"customers",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "27"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-CSRFToken",
+												"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{server}}/admin/customers/:id/",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"admin",
+												"customers",
+												":id",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "27"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.27.5"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 06:11:28 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "173"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, PATCH, DELETE, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 27,\n        \"name\": \"Customer 1\",\n        \"email\": \"custtomer-1@app.com\",\n        \"created_at\": \"2025-05-09T01:21:10.828\",\n        \"updated_at\": \"2025-05-09T01:21:10.828\"\n    },\n    \"message\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "Create Customer",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"new customer\",\n    \"email\": \"new-customer4@app.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/admin/customers/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"admin",
+										"customers",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create Customer",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"new customer\",\n    \"email\": \"new-customer4@app.com\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}/admin/customers/",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"admin",
+												"customers",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.27.5"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 06:11:41 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "73"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"customer_id\": 42\n    },\n    \"message\": \"Customer created successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Customer",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"updated name\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/admin/customers/:id/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"admin",
+										"customers",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "27"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update Customer",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "X-CSRFToken",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"updated name\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}/admin/customers/:id/",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"admin",
+												"customers",
+												":id",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "27"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.27.5"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 06:12:24 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "56"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, PATCH, DELETE, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {},\n    \"message\": \"Customer updated successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Customer",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"updated name\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/admin/customers/:id/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"admin",
+										"customers",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "27"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Customer",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "X-CSRFToken",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"updated name\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}/admin/customers/:id/",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"admin",
+												"customers",
+												":id",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "27"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.27.5"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 06:12:41 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "56"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, PATCH, DELETE, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {},\n    \"message\": \"Customer deleted successfully\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Tickets",
+					"item": [
+						{
+							"name": "List Tickets",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{server}}/admin/tickets/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"admin",
+										"tickets",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get by id",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{server}}/admin/tickets/:id/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"admin",
+										"tickets",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "136"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Ticket",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"new ticket\",\n    \"description\": \"ticket description\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/admin/tickets/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"admin",
+										"tickets",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Ticket",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"updated description\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/admin/tickets/:id/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"admin",
+										"tickets",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "152"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Ticket",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{server}}/admin/tickets/:id/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"admin",
+										"tickets",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "152"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Agent",
+			"item": [
+				{
+					"name": "Customers",
+					"item": [
+						{
+							"name": "List Customers",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{server}}/agents/customers/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"agents",
+										"customers",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "List Customers",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-CSRFToken",
+												"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{server}}/agents/customers/",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"agents",
+												"customers",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.27.5"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 01:21:35 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1029"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 27,\n            \"name\": \"Customer 1\",\n            \"email\": \"custtomer-1@app.com\"\n        },\n        {\n            \"id\": 28,\n            \"name\": \"Customer 2\",\n            \"email\": \"custtomer-2@app.com\"\n        },\n        {\n            \"id\": 29,\n            \"name\": \"Customer 3\",\n            \"email\": \"custtomer-3@app.com\"\n        },\n        {\n            \"id\": 30,\n            \"name\": \"Customer 4\",\n            \"email\": \"custtomer-4@app.com\"\n        },\n        {\n            \"id\": 31,\n            \"name\": \"Customer 5\",\n            \"email\": \"custtomer-5@app.com\"\n        },\n        {\n            \"id\": 32,\n            \"name\": \"Customer 6\",\n            \"email\": \"custtomer-6@app.com\"\n        },\n        {\n            \"id\": 33,\n            \"name\": \"Customer 7\",\n            \"email\": \"custtomer-7@app.com\"\n        },\n        {\n            \"id\": 34,\n            \"name\": \"Customer 8\",\n            \"email\": \"custtomer-8@app.com\"\n        },\n        {\n            \"id\": 35,\n            \"name\": \"Customer 9\",\n            \"email\": \"custtomer-9@app.com\"\n        },\n        {\n            \"id\": 36,\n            \"name\": \"Customer 10\",\n            \"email\": \"custtomer-10@app.com\"\n        },\n        {\n            \"id\": 37,\n            \"name\": \"Customer 11\",\n            \"email\": \"custtomer-11@app.com\"\n        },\n        {\n            \"id\": 38,\n            \"name\": \"Customer 12\",\n            \"email\": \"custtomer-12@app.com\"\n        },\n        {\n            \"id\": 39,\n            \"name\": \"Customer 13\",\n            \"email\": \"custtomer-13@app.com\"\n        },\n        {\n            \"id\": 40,\n            \"name\": \"Customer 14\",\n            \"email\": \"custtomer-14@app.com\"\n        },\n        {\n            \"id\": 41,\n            \"name\": \"Customer 15\",\n            \"email\": \"custtomer-15@app.com\"\n        }\n    ],\n    \"message\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "get by id",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{server}}/agents/customers/:id/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"agents",
+										"customers",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-CSRFToken",
+												"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{server}}/agents/customers/:id/",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"agents",
+												"customers",
+												":id",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.27.5"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 08 May 2025 21:31:22 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "90"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Customer 2\",\n        \"email\": \"custtomer-2@app.com\"\n    },\n    \"message\": null\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Tickets",
+					"item": [
+						{
+							"name": "List Tickets",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{server}}/agents/tickets/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"agents",
+										"tickets",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "List Tickets",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-CSRFToken",
+												"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{server}}/agents/tickets/",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"agents",
+												"tickets",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.27.5"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 01:22:42 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1738"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 155,\n            \"title\": \"Ticket 3 created by admin1\",\n            \"description\": \"Description for ticket 3 created by admin1\"\n        },\n        {\n            \"id\": 156,\n            \"title\": \"Ticket 4 created by admin1\",\n            \"description\": \"Description for ticket 4 created by admin1\"\n        },\n        {\n            \"id\": 157,\n            \"title\": \"Ticket 5 created by admin1\",\n            \"description\": \"Description for ticket 5 created by admin1\"\n        },\n        {\n            \"id\": 158,\n            \"title\": \"Ticket 6 created by admin1\",\n            \"description\": \"Description for ticket 6 created by admin1\"\n        },\n        {\n            \"id\": 159,\n            \"title\": \"Ticket 7 created by admin1\",\n            \"description\": \"Description for ticket 7 created by admin1\"\n        },\n        {\n            \"id\": 160,\n            \"title\": \"Ticket 8 created by admin1\",\n            \"description\": \"Description for ticket 8 created by admin1\"\n        },\n        {\n            \"id\": 161,\n            \"title\": \"Ticket 9 created by admin1\",\n            \"description\": \"Description for ticket 9 created by admin1\"\n        },\n        {\n            \"id\": 162,\n            \"title\": \"Ticket 10 created by admin1\",\n            \"description\": \"Description for ticket 10 created by admin1\"\n        },\n        {\n            \"id\": 163,\n            \"title\": \"Ticket 11 created by admin1\",\n            \"description\": \"Description for ticket 11 created by admin1\"\n        },\n        {\n            \"id\": 164,\n            \"title\": \"Ticket 12 created by admin1\",\n            \"description\": \"Description for ticket 12 created by admin1\"\n        },\n        {\n            \"id\": 165,\n            \"title\": \"Ticket 13 created by admin1\",\n            \"description\": \"Description for ticket 13 created by admin1\"\n        },\n        {\n            \"id\": 166,\n            \"title\": \"Ticket 14 created by admin1\",\n            \"description\": \"Description for ticket 14 created by admin1\"\n        },\n        {\n            \"id\": 167,\n            \"title\": \"Ticket 15 created by admin1\",\n            \"description\": \"Description for ticket 15 created by admin1\"\n        },\n        {\n            \"id\": 168,\n            \"title\": \"Ticket 16 created by admin1\",\n            \"description\": \"Description for ticket 16 created by admin1\"\n        },\n        {\n            \"id\": 169,\n            \"title\": \"Ticket 17 created by admin1\",\n            \"description\": \"Description for ticket 17 created by admin1\"\n        }\n    ],\n    \"message\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "get by id",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{server}}/agents/tickets/:id/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"agents",
+										"tickets",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "136"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-CSRFToken",
+												"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{server}}/agents/tickets/:id/",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"agents",
+												"tickets",
+												":id",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "136"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.27.5"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 08 May 2025 22:41:56 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "46"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"Ticket not found\",\n    \"message\": null\n}"
+								},
+								{
+									"name": "get by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-CSRFToken",
+												"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{server}}/agents/tickets/:id/",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"agents",
+												"tickets",
+												":id",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "155"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.27.5"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 06:07:50 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "138"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 155,\n        \"title\": \"Ticket 3 created by admin1\",\n        \"description\": \"Description for ticket 3 created by admin1\"\n    },\n    \"message\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "Sell Ticket",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"customer_id\": 27\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/agents/tickets/:id/sell/",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"agents",
+										"tickets",
+										":id",
+										"sell",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "154"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Sell Ticket",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-CSRFToken",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"customer_id\": 27\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}/agents/tickets/:id/sell/",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"agents",
+												"tickets",
+												":id",
+												"sell",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "154"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.27.5"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 01:22:38 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "51"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {},\n    \"message\": \"Ticket sold successfully\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
