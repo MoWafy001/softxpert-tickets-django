@@ -1,9 +1,6 @@
 from common.json_responses import DataJsonResponse, ErrorJsonResponse
 from customers.models import Customer
 from tickets.models import Ticket
-from django.contrib.auth.decorators import login_required
-from django.views.decorators.csrf import csrf_exempt
-from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import action
 from rest_framework.views import APIView
@@ -12,8 +9,6 @@ from common.csrf_except_session_authentication import CsrfExemptSessionAuthentic
 from users.permissions import IsAgent
 from django.db import transaction, DatabaseError
 import time
-
-MAX_RETRIES = 3
 
 
 class TicketViewSet(APIView):
@@ -30,13 +25,16 @@ class TicketViewSet(APIView):
         """
         List all tickets.
         """
+
         user = request.user
         if not user.is_authenticated:
             return ErrorJsonResponse("User not authenticated", status=401)
 
         # retry incase of database error because of deadlock
-        retries = 0
-        while retries < MAX_RETRIES:
+        started_at = time.time()
+        def get_time_elapsed():
+            return time.time() - started_at
+        while get_time_elapsed() < 5:
             try:
                 with transaction.atomic():
                     no_tickets_assigned_to_agent = Ticket.objects.filter(assigned_to=user).count()
@@ -45,7 +43,9 @@ class TicketViewSet(APIView):
                         unassigned_tickets = (
                             Ticket.objects.filter(assigned_to=None)
                             .order_by("created_at")
-                            .select_for_update()[:no_tickets_to_assign]
+                            .select_for_update(
+                                skip_locked=False
+                            )[:no_tickets_to_assign]
                         )
                         for ticket in unassigned_tickets:
                             ticket.assigned_to = user
@@ -65,8 +65,8 @@ class TicketViewSet(APIView):
                 ]
                 return DataJsonResponse(tickets_list)
 
-            except DatabaseError:
-                retries += 1
+            except DatabaseError as e:
+                print(f"Database error: {e}. Retrying...")
                 time.sleep(1)  # Wait before retrying
 
         return ErrorJsonResponse("Could not assign tickets due to a database error", status=500)

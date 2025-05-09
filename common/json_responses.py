@@ -10,6 +10,9 @@ class DataJsonResponse(JsonResponse):
         Initialize the response with the given data and status code.
         """
 
+        if isinstance(data, str):
+            data = {"data": data}
+
         d = data["data"] if 'data' in data else None
         m = data["message"] if 'message' in data else None
 
@@ -36,7 +39,9 @@ class ErrorJsonResponse(JsonResponse):
         """
         Initialize the response with the given error and status code.
         """
-
+        if isinstance(error, str):
+            error = {"error": error}
+        
         e = error["error"] if 'error' in error else None
         m = error["message"] if 'message' in error else None
         if e:
