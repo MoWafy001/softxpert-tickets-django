@@ -10,6 +10,7 @@ from rest_framework.views import APIView
 from rest_framework.authentication import SessionAuthentication
 from common.csrf_except_session_authentication import CsrfExemptSessionAuthentication
 from users.permissions import IsAgent
+from django.db import transaction
 
 
 class TicketViewSet(APIView):
@@ -32,9 +33,16 @@ class TicketViewSet(APIView):
 
         no_tickets_assigned_to_agent = Ticket.objects.filter(assigned_to=user).count()
         no_tickets_to_assign = 15 - no_tickets_assigned_to_agent
+
+        # using atomic transaction to ensure that the tickets are assigned in a single transaction
+        # and locking the tickets to prevent being assigned to multiple agents at the same time
         if no_tickets_to_assign > 0:
-            ids = Ticket.objects.filter(assigned_to=None).order_by("created_at").values_list("id", flat=True)[:no_tickets_to_assign]
-            Ticket.objects.filter(id__in=ids).update(assigned_to=user)
+            with transaction.atomic():
+                tickets_to_assign = Ticket.objects.filter(assigned_to=None, sold_to=None).order_by("created_at")[:no_tickets_to_assign]
+                for ticket in tickets_to_assign:
+                    ticket.assigned_to = user
+                    ticket.save()
+
         tickets = Ticket.objects.filter(assigned_to=user).order_by("created_at")
         tickets_list = [
             {
