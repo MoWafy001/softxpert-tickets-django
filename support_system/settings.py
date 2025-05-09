@@ -31,8 +31,8 @@ ENV: str = Env.get("ENV", "dev").to_str()
 
 DEBUG = Env.get("DEBUG", "true").to_bool()
 
-if(ENV == "dev"):
-    DEBUG = True
+if(ENV == "prod"):
+    DEBUG = False
 
 if(DEBUG):
     SECRET_KEY = Env.get("SECRET_KEY", "django-insecure-&**q==jwjqna^*w^@rfxy315jd(p41#29j@h2&kjv_l$(bciej").to_str()
