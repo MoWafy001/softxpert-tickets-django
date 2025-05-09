@@ -58,6 +58,8 @@ class TicketViewSet(APIView):
                         "id": ticket.id,
                         "title": ticket.title,
                         "description": ticket.description,
+                        "created_at": ticket.created_at,
+                        "updated_at": ticket.updated_at,
                     }
                     for ticket in tickets
                 ]
@@ -92,6 +94,8 @@ class TicketByIdViewSet(APIView):
                 "id": ticket.id,
                 "title": ticket.title,
                 "description": ticket.description,
+                "created_at": ticket.created_at,
+                "updated_at": ticket.updated_at,
             }
             return DataJsonResponse(ticket_data)
 
