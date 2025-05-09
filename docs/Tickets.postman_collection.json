@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"support_agent1\",\n    \"password\": \"123\"\n}",
+							"raw": "{\n    \"username\": \"admin1\",\n    \"password\": \"123\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1172,7 +1172,84 @@
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "List Tickets",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-CSRFToken",
+												"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{server}}/admin/tickets/",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"admin",
+												"tickets",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.27.5"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 08:59:24 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "29379"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 150,\n            \"title\": \"Ticket 30 created by admin5\",\n            \"description\": \"Description for ticket 30 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.357\",\n            \"updated_at\": \"2025-05-09T08:58:51.357\"\n        },\n        {\n            \"id\": 149,\n            \"title\": \"Ticket 29 created by admin5\",\n            \"description\": \"Description for ticket 29 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.356\",\n            \"updated_at\": \"2025-05-09T08:58:51.356\"\n        },\n        {\n            \"id\": 148,\n            \"title\": \"Ticket 28 created by admin5\",\n            \"description\": \"Description for ticket 28 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.355\",\n            \"updated_at\": \"2025-05-09T08:58:51.355\"\n        },\n        {\n            \"id\": 147,\n            \"title\": \"Ticket 27 created by admin5\",\n            \"description\": \"Description for ticket 27 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.353\",\n            \"updated_at\": \"2025-05-09T08:58:51.353\"\n        },\n        {\n            \"id\": 146,\n            \"title\": \"Ticket 26 created by admin5\",\n            \"description\": \"Description for ticket 26 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.351\",\n            \"updated_at\": \"2025-05-09T08:58:51.351\"\n        },\n        {\n            \"id\": 145,\n            \"title\": \"Ticket 25 created by admin5\",\n            \"description\": \"Description for ticket 25 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.350\",\n            \"updated_at\": \"2025-05-09T08:58:51.350\"\n        },\n        {\n            \"id\": 144,\n            \"title\": \"Ticket 24 created by admin5\",\n            \"description\": \"Description for ticket 24 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.348\",\n            \"updated_at\": \"2025-05-09T08:58:51.348\"\n        },\n        {\n            \"id\": 143,\n            \"title\": \"Ticket 23 created by admin5\",\n            \"description\": \"Description for ticket 23 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.347\",\n            \"updated_at\": \"2025-05-09T08:58:51.347\"\n        },\n        {\n            \"id\": 142,\n            \"title\": \"Ticket 22 created by admin5\",\n            \"description\": \"Description for ticket 22 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.346\",\n            \"updated_at\": \"2025-05-09T08:58:51.346\"\n        },\n        {\n            \"id\": 141,\n            \"title\": \"Ticket 21 created by admin5\",\n            \"description\": \"Description for ticket 21 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.345\",\n            \"updated_at\": \"2025-05-09T08:58:51.345\"\n        },\n        {\n            \"id\": 140,\n            \"title\": \"Ticket 20 created by admin5\",\n            \"description\": \"Description for ticket 20 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.344\",\n            \"updated_at\": \"2025-05-09T08:58:51.344\"\n        },\n        {\n            \"id\": 139,\n            \"title\": \"Ticket 19 created by admin5\",\n            \"description\": \"Description for ticket 19 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.343\",\n            \"updated_at\": \"2025-05-09T08:58:51.343\"\n        },\n        {\n            \"id\": 138,\n            \"title\": \"Ticket 18 created by admin5\",\n            \"description\": \"Description for ticket 18 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.342\",\n            \"updated_at\": \"2025-05-09T08:58:51.342\"\n        },\n        {\n            \"id\": 137,\n            \"title\": \"Ticket 17 created by admin5\",\n            \"description\": \"Description for ticket 17 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.341\",\n            \"updated_at\": \"2025-05-09T08:58:51.341\"\n        },\n        {\n            \"id\": 136,\n            \"title\": \"Ticket 16 created by admin5\",\n            \"description\": \"Description for ticket 16 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.339\",\n            \"updated_at\": \"2025-05-09T08:58:51.339\"\n        },\n        {\n            \"id\": 135,\n            \"title\": \"Ticket 15 created by admin5\",\n            \"description\": \"Description for ticket 15 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.338\",\n            \"updated_at\": \"2025-05-09T08:58:51.338\"\n        },\n        {\n            \"id\": 134,\n            \"title\": \"Ticket 14 created by admin5\",\n            \"description\": \"Description for ticket 14 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.336\",\n            \"updated_at\": \"2025-05-09T08:58:51.336\"\n        },\n        {\n            \"id\": 133,\n            \"title\": \"Ticket 13 created by admin5\",\n            \"description\": \"Description for ticket 13 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.334\",\n            \"updated_at\": \"2025-05-09T08:58:51.334\"\n        },\n        {\n            \"id\": 132,\n            \"title\": \"Ticket 12 created by admin5\",\n            \"description\": \"Description for ticket 12 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.333\",\n            \"updated_at\": \"2025-05-09T08:58:51.333\"\n        },\n        {\n            \"id\": 131,\n            \"title\": \"Ticket 11 created by admin5\",\n            \"description\": \"Description for ticket 11 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.332\",\n            \"updated_at\": \"2025-05-09T08:58:51.332\"\n        },\n        {\n            \"id\": 130,\n            \"title\": \"Ticket 10 created by admin5\",\n            \"description\": \"Description for ticket 10 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.331\",\n            \"updated_at\": \"2025-05-09T08:58:51.331\"\n        },\n        {\n            \"id\": 129,\n            \"title\": \"Ticket 9 created by admin5\",\n            \"description\": \"Description for ticket 9 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.330\",\n            \"updated_at\": \"2025-05-09T08:58:51.330\"\n        },\n        {\n            \"id\": 128,\n            \"title\": \"Ticket 8 created by admin5\",\n            \"description\": \"Description for ticket 8 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.329\",\n            \"updated_at\": \"2025-05-09T08:58:51.329\"\n        },\n        {\n            \"id\": 127,\n            \"title\": \"Ticket 7 created by admin5\",\n            \"description\": \"Description for ticket 7 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.328\",\n            \"updated_at\": \"2025-05-09T08:58:51.328\"\n        },\n        {\n            \"id\": 126,\n            \"title\": \"Ticket 6 created by admin5\",\n            \"description\": \"Description for ticket 6 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.327\",\n            \"updated_at\": \"2025-05-09T08:58:51.327\"\n        },\n        {\n            \"id\": 125,\n            \"title\": \"Ticket 5 created by admin5\",\n            \"description\": \"Description for ticket 5 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.326\",\n            \"updated_at\": \"2025-05-09T08:58:51.326\"\n        },\n        {\n            \"id\": 124,\n            \"title\": \"Ticket 4 created by admin5\",\n            \"description\": \"Description for ticket 4 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.325\",\n            \"updated_at\": \"2025-05-09T08:58:51.325\"\n        },\n        {\n            \"id\": 123,\n            \"title\": \"Ticket 3 created by admin5\",\n            \"description\": \"Description for ticket 3 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.323\",\n            \"updated_at\": \"2025-05-09T08:58:51.323\"\n        },\n        {\n            \"id\": 122,\n            \"title\": \"Ticket 2 created by admin5\",\n            \"description\": \"Description for ticket 2 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.322\",\n            \"updated_at\": \"2025-05-09T08:58:51.322\"\n        },\n        {\n            \"id\": 121,\n            \"title\": \"Ticket 1 created by admin5\",\n            \"description\": \"Description for ticket 1 created by admin5\",\n            \"created_at\": \"2025-05-09T08:58:51.320\",\n            \"updated_at\": \"2025-05-09T08:58:51.320\"\n        },\n        {\n            \"id\": 120,\n            \"title\": \"Ticket 30 created by admin4\",\n            \"description\": \"Description for ticket 30 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.318\",\n            \"updated_at\": \"2025-05-09T08:58:51.318\"\n        },\n        {\n            \"id\": 119,\n            \"title\": \"Ticket 29 created by admin4\",\n            \"description\": \"Description for ticket 29 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.317\",\n            \"updated_at\": \"2025-05-09T08:58:51.317\"\n        },\n        {\n            \"id\": 118,\n            \"title\": \"Ticket 28 created by admin4\",\n            \"description\": \"Description for ticket 28 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.316\",\n            \"updated_at\": \"2025-05-09T08:58:51.316\"\n        },\n        {\n            \"id\": 117,\n            \"title\": \"Ticket 27 created by admin4\",\n            \"description\": \"Description for ticket 27 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.315\",\n            \"updated_at\": \"2025-05-09T08:58:51.315\"\n        },\n        {\n            \"id\": 116,\n            \"title\": \"Ticket 26 created by admin4\",\n            \"description\": \"Description for ticket 26 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.313\",\n            \"updated_at\": \"2025-05-09T08:58:51.313\"\n        },\n        {\n            \"id\": 115,\n            \"title\": \"Ticket 25 created by admin4\",\n            \"description\": \"Description for ticket 25 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.312\",\n            \"updated_at\": \"2025-05-09T08:58:51.312\"\n        },\n        {\n            \"id\": 114,\n            \"title\": \"Ticket 24 created by admin4\",\n            \"description\": \"Description for ticket 24 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.311\",\n            \"updated_at\": \"2025-05-09T08:58:51.311\"\n        },\n        {\n            \"id\": 113,\n            \"title\": \"Ticket 23 created by admin4\",\n            \"description\": \"Description for ticket 23 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.310\",\n            \"updated_at\": \"2025-05-09T08:58:51.310\"\n        },\n        {\n            \"id\": 112,\n            \"title\": \"Ticket 22 created by admin4\",\n            \"description\": \"Description for ticket 22 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.308\",\n            \"updated_at\": \"2025-05-09T08:58:51.308\"\n        },\n        {\n            \"id\": 111,\n            \"title\": \"Ticket 21 created by admin4\",\n            \"description\": \"Description for ticket 21 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.307\",\n            \"updated_at\": \"2025-05-09T08:58:51.307\"\n        },\n        {\n            \"id\": 110,\n            \"title\": \"Ticket 20 created by admin4\",\n            \"description\": \"Description for ticket 20 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.306\",\n            \"updated_at\": \"2025-05-09T08:58:51.306\"\n        },\n        {\n            \"id\": 109,\n            \"title\": \"Ticket 19 created by admin4\",\n            \"description\": \"Description for ticket 19 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.305\",\n            \"updated_at\": \"2025-05-09T08:58:51.305\"\n        },\n        {\n            \"id\": 108,\n            \"title\": \"Ticket 18 created by admin4\",\n            \"description\": \"Description for ticket 18 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.303\",\n            \"updated_at\": \"2025-05-09T08:58:51.303\"\n        },\n        {\n            \"id\": 107,\n            \"title\": \"Ticket 17 created by admin4\",\n            \"description\": \"Description for ticket 17 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.302\",\n            \"updated_at\": \"2025-05-09T08:58:51.302\"\n        },\n        {\n            \"id\": 106,\n            \"title\": \"Ticket 16 created by admin4\",\n            \"description\": \"Description for ticket 16 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.301\",\n            \"updated_at\": \"2025-05-09T08:58:51.301\"\n        },\n        {\n            \"id\": 105,\n            \"title\": \"Ticket 15 created by admin4\",\n            \"description\": \"Description for ticket 15 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.299\",\n            \"updated_at\": \"2025-05-09T08:58:51.299\"\n        },\n        {\n            \"id\": 104,\n            \"title\": \"Ticket 14 created by admin4\",\n            \"description\": \"Description for ticket 14 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.298\",\n            \"updated_at\": \"2025-05-09T08:58:51.298\"\n        },\n        {\n            \"id\": 103,\n            \"title\": \"Ticket 13 created by admin4\",\n            \"description\": \"Description for ticket 13 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.297\",\n            \"updated_at\": \"2025-05-09T08:58:51.297\"\n        },\n        {\n            \"id\": 102,\n            \"title\": \"Ticket 12 created by admin4\",\n            \"description\": \"Description for ticket 12 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.296\",\n            \"updated_at\": \"2025-05-09T08:58:51.296\"\n        },\n        {\n            \"id\": 101,\n            \"title\": \"Ticket 11 created by admin4\",\n            \"description\": \"Description for ticket 11 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.295\",\n            \"updated_at\": \"2025-05-09T08:58:51.295\"\n        },\n        {\n            \"id\": 100,\n            \"title\": \"Ticket 10 created by admin4\",\n            \"description\": \"Description for ticket 10 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.294\",\n            \"updated_at\": \"2025-05-09T08:58:51.294\"\n        },\n        {\n            \"id\": 99,\n            \"title\": \"Ticket 9 created by admin4\",\n            \"description\": \"Description for ticket 9 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.292\",\n            \"updated_at\": \"2025-05-09T08:58:51.292\"\n        },\n        {\n            \"id\": 98,\n            \"title\": \"Ticket 8 created by admin4\",\n            \"description\": \"Description for ticket 8 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.291\",\n            \"updated_at\": \"2025-05-09T08:58:51.291\"\n        },\n        {\n            \"id\": 97,\n            \"title\": \"Ticket 7 created by admin4\",\n            \"description\": \"Description for ticket 7 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.289\",\n            \"updated_at\": \"2025-05-09T08:58:51.289\"\n        },\n        {\n            \"id\": 96,\n            \"title\": \"Ticket 6 created by admin4\",\n            \"description\": \"Description for ticket 6 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.288\",\n            \"updated_at\": \"2025-05-09T08:58:51.288\"\n        },\n        {\n            \"id\": 95,\n            \"title\": \"Ticket 5 created by admin4\",\n            \"description\": \"Description for ticket 5 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.286\",\n            \"updated_at\": \"2025-05-09T08:58:51.286\"\n        },\n        {\n            \"id\": 94,\n            \"title\": \"Ticket 4 created by admin4\",\n            \"description\": \"Description for ticket 4 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.285\",\n            \"updated_at\": \"2025-05-09T08:58:51.285\"\n        },\n        {\n            \"id\": 93,\n            \"title\": \"Ticket 3 created by admin4\",\n            \"description\": \"Description for ticket 3 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.284\",\n            \"updated_at\": \"2025-05-09T08:58:51.284\"\n        },\n        {\n            \"id\": 92,\n            \"title\": \"Ticket 2 created by admin4\",\n            \"description\": \"Description for ticket 2 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.283\",\n            \"updated_at\": \"2025-05-09T08:58:51.283\"\n        },\n        {\n            \"id\": 91,\n            \"title\": \"Ticket 1 created by admin4\",\n            \"description\": \"Description for ticket 1 created by admin4\",\n            \"created_at\": \"2025-05-09T08:58:51.282\",\n            \"updated_at\": \"2025-05-09T08:58:51.282\"\n        },\n        {\n            \"id\": 90,\n            \"title\": \"Ticket 30 created by admin3\",\n            \"description\": \"Description for ticket 30 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.281\",\n            \"updated_at\": \"2025-05-09T08:58:51.281\"\n        },\n        {\n            \"id\": 89,\n            \"title\": \"Ticket 29 created by admin3\",\n            \"description\": \"Description for ticket 29 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.279\",\n            \"updated_at\": \"2025-05-09T08:58:51.279\"\n        },\n        {\n            \"id\": 88,\n            \"title\": \"Ticket 28 created by admin3\",\n            \"description\": \"Description for ticket 28 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.278\",\n            \"updated_at\": \"2025-05-09T08:58:51.278\"\n        },\n        {\n            \"id\": 87,\n            \"title\": \"Ticket 27 created by admin3\",\n            \"description\": \"Description for ticket 27 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.277\",\n            \"updated_at\": \"2025-05-09T08:58:51.277\"\n        },\n        {\n            \"id\": 86,\n            \"title\": \"Ticket 26 created by admin3\",\n            \"description\": \"Description for ticket 26 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.276\",\n            \"updated_at\": \"2025-05-09T08:58:51.276\"\n        },\n        {\n            \"id\": 85,\n            \"title\": \"Ticket 25 created by admin3\",\n            \"description\": \"Description for ticket 25 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.274\",\n            \"updated_at\": \"2025-05-09T08:58:51.274\"\n        },\n        {\n            \"id\": 84,\n            \"title\": \"Ticket 24 created by admin3\",\n            \"description\": \"Description for ticket 24 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.273\",\n            \"updated_at\": \"2025-05-09T08:58:51.273\"\n        },\n        {\n            \"id\": 83,\n            \"title\": \"Ticket 23 created by admin3\",\n            \"description\": \"Description for ticket 23 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.272\",\n            \"updated_at\": \"2025-05-09T08:58:51.272\"\n        },\n        {\n            \"id\": 82,\n            \"title\": \"Ticket 22 created by admin3\",\n            \"description\": \"Description for ticket 22 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.271\",\n            \"updated_at\": \"2025-05-09T08:58:51.271\"\n        },\n        {\n            \"id\": 81,\n            \"title\": \"Ticket 21 created by admin3\",\n            \"description\": \"Description for ticket 21 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.270\",\n            \"updated_at\": \"2025-05-09T08:58:51.270\"\n        },\n        {\n            \"id\": 80,\n            \"title\": \"Ticket 20 created by admin3\",\n            \"description\": \"Description for ticket 20 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.269\",\n            \"updated_at\": \"2025-05-09T08:58:51.269\"\n        },\n        {\n            \"id\": 79,\n            \"title\": \"Ticket 19 created by admin3\",\n            \"description\": \"Description for ticket 19 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.267\",\n            \"updated_at\": \"2025-05-09T08:58:51.267\"\n        },\n        {\n            \"id\": 78,\n            \"title\": \"Ticket 18 created by admin3\",\n            \"description\": \"Description for ticket 18 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.266\",\n            \"updated_at\": \"2025-05-09T08:58:51.266\"\n        },\n        {\n            \"id\": 77,\n            \"title\": \"Ticket 17 created by admin3\",\n            \"description\": \"Description for ticket 17 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.265\",\n            \"updated_at\": \"2025-05-09T08:58:51.265\"\n        },\n        {\n            \"id\": 76,\n            \"title\": \"Ticket 16 created by admin3\",\n            \"description\": \"Description for ticket 16 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.263\",\n            \"updated_at\": \"2025-05-09T08:58:51.263\"\n        },\n        {\n            \"id\": 75,\n            \"title\": \"Ticket 15 created by admin3\",\n            \"description\": \"Description for ticket 15 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.261\",\n            \"updated_at\": \"2025-05-09T08:58:51.261\"\n        },\n        {\n            \"id\": 74,\n            \"title\": \"Ticket 14 created by admin3\",\n            \"description\": \"Description for ticket 14 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.260\",\n            \"updated_at\": \"2025-05-09T08:58:51.260\"\n        },\n        {\n            \"id\": 73,\n            \"title\": \"Ticket 13 created by admin3\",\n            \"description\": \"Description for ticket 13 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.259\",\n            \"updated_at\": \"2025-05-09T08:58:51.259\"\n        },\n        {\n            \"id\": 72,\n            \"title\": \"Ticket 12 created by admin3\",\n            \"description\": \"Description for ticket 12 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.257\",\n            \"updated_at\": \"2025-05-09T08:58:51.257\"\n        },\n        {\n            \"id\": 71,\n            \"title\": \"Ticket 11 created by admin3\",\n            \"description\": \"Description for ticket 11 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.256\",\n            \"updated_at\": \"2025-05-09T08:58:51.256\"\n        },\n        {\n            \"id\": 70,\n            \"title\": \"Ticket 10 created by admin3\",\n            \"description\": \"Description for ticket 10 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.255\",\n            \"updated_at\": \"2025-05-09T08:58:51.255\"\n        },\n        {\n            \"id\": 69,\n            \"title\": \"Ticket 9 created by admin3\",\n            \"description\": \"Description for ticket 9 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.254\",\n            \"updated_at\": \"2025-05-09T08:58:51.254\"\n        },\n        {\n            \"id\": 68,\n            \"title\": \"Ticket 8 created by admin3\",\n            \"description\": \"Description for ticket 8 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.253\",\n            \"updated_at\": \"2025-05-09T08:58:51.253\"\n        },\n        {\n            \"id\": 67,\n            \"title\": \"Ticket 7 created by admin3\",\n            \"description\": \"Description for ticket 7 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.251\",\n            \"updated_at\": \"2025-05-09T08:58:51.251\"\n        },\n        {\n            \"id\": 66,\n            \"title\": \"Ticket 6 created by admin3\",\n            \"description\": \"Description for ticket 6 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.250\",\n            \"updated_at\": \"2025-05-09T08:58:51.250\"\n        },\n        {\n            \"id\": 65,\n            \"title\": \"Ticket 5 created by admin3\",\n            \"description\": \"Description for ticket 5 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.249\",\n            \"updated_at\": \"2025-05-09T08:58:51.249\"\n        },\n        {\n            \"id\": 64,\n            \"title\": \"Ticket 4 created by admin3\",\n            \"description\": \"Description for ticket 4 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.248\",\n            \"updated_at\": \"2025-05-09T08:58:51.248\"\n        },\n        {\n            \"id\": 63,\n            \"title\": \"Ticket 3 created by admin3\",\n            \"description\": \"Description for ticket 3 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.247\",\n            \"updated_at\": \"2025-05-09T08:58:51.247\"\n        },\n        {\n            \"id\": 62,\n            \"title\": \"Ticket 2 created by admin3\",\n            \"description\": \"Description for ticket 2 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.246\",\n            \"updated_at\": \"2025-05-09T08:58:51.246\"\n        },\n        {\n            \"id\": 61,\n            \"title\": \"Ticket 1 created by admin3\",\n            \"description\": \"Description for ticket 1 created by admin3\",\n            \"created_at\": \"2025-05-09T08:58:51.245\",\n            \"updated_at\": \"2025-05-09T08:58:51.245\"\n        },\n        {\n            \"id\": 60,\n            \"title\": \"Ticket 30 created by admin2\",\n            \"description\": \"Description for ticket 30 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.244\",\n            \"updated_at\": \"2025-05-09T08:58:51.244\"\n        },\n        {\n            \"id\": 59,\n            \"title\": \"Ticket 29 created by admin2\",\n            \"description\": \"Description for ticket 29 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.243\",\n            \"updated_at\": \"2025-05-09T08:58:51.243\"\n        },\n        {\n            \"id\": 58,\n            \"title\": \"Ticket 28 created by admin2\",\n            \"description\": \"Description for ticket 28 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.242\",\n            \"updated_at\": \"2025-05-09T08:58:51.242\"\n        },\n        {\n            \"id\": 57,\n            \"title\": \"Ticket 27 created by admin2\",\n            \"description\": \"Description for ticket 27 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.240\",\n            \"updated_at\": \"2025-05-09T08:58:51.240\"\n        },\n        {\n            \"id\": 56,\n            \"title\": \"Ticket 26 created by admin2\",\n            \"description\": \"Description for ticket 26 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.239\",\n            \"updated_at\": \"2025-05-09T08:58:51.239\"\n        },\n        {\n            \"id\": 55,\n            \"title\": \"Ticket 25 created by admin2\",\n            \"description\": \"Description for ticket 25 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.238\",\n            \"updated_at\": \"2025-05-09T08:58:51.238\"\n        },\n        {\n            \"id\": 54,\n            \"title\": \"Ticket 24 created by admin2\",\n            \"description\": \"Description for ticket 24 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.236\",\n            \"updated_at\": \"2025-05-09T08:58:51.236\"\n        },\n        {\n            \"id\": 53,\n            \"title\": \"Ticket 23 created by admin2\",\n            \"description\": \"Description for ticket 23 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.235\",\n            \"updated_at\": \"2025-05-09T08:58:51.235\"\n        },\n        {\n            \"id\": 52,\n            \"title\": \"Ticket 22 created by admin2\",\n            \"description\": \"Description for ticket 22 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.233\",\n            \"updated_at\": \"2025-05-09T08:58:51.233\"\n        },\n        {\n            \"id\": 51,\n            \"title\": \"Ticket 21 created by admin2\",\n            \"description\": \"Description for ticket 21 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.232\",\n            \"updated_at\": \"2025-05-09T08:58:51.232\"\n        },\n        {\n            \"id\": 50,\n            \"title\": \"Ticket 20 created by admin2\",\n            \"description\": \"Description for ticket 20 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.231\",\n            \"updated_at\": \"2025-05-09T08:58:51.231\"\n        },\n        {\n            \"id\": 49,\n            \"title\": \"Ticket 19 created by admin2\",\n            \"description\": \"Description for ticket 19 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.230\",\n            \"updated_at\": \"2025-05-09T08:58:51.230\"\n        },\n        {\n            \"id\": 48,\n            \"title\": \"Ticket 18 created by admin2\",\n            \"description\": \"Description for ticket 18 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.229\",\n            \"updated_at\": \"2025-05-09T08:58:51.229\"\n        },\n        {\n            \"id\": 47,\n            \"title\": \"Ticket 17 created by admin2\",\n            \"description\": \"Description for ticket 17 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.228\",\n            \"updated_at\": \"2025-05-09T08:58:51.228\"\n        },\n        {\n            \"id\": 46,\n            \"title\": \"Ticket 16 created by admin2\",\n            \"description\": \"Description for ticket 16 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.227\",\n            \"updated_at\": \"2025-05-09T08:58:51.227\"\n        },\n        {\n            \"id\": 45,\n            \"title\": \"Ticket 15 created by admin2\",\n            \"description\": \"Description for ticket 15 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.226\",\n            \"updated_at\": \"2025-05-09T08:58:51.226\"\n        },\n        {\n            \"id\": 44,\n            \"title\": \"Ticket 14 created by admin2\",\n            \"description\": \"Description for ticket 14 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.225\",\n            \"updated_at\": \"2025-05-09T08:58:51.225\"\n        },\n        {\n            \"id\": 43,\n            \"title\": \"Ticket 13 created by admin2\",\n            \"description\": \"Description for ticket 13 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.224\",\n            \"updated_at\": \"2025-05-09T08:58:51.224\"\n        },\n        {\n            \"id\": 42,\n            \"title\": \"Ticket 12 created by admin2\",\n            \"description\": \"Description for ticket 12 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.222\",\n            \"updated_at\": \"2025-05-09T08:58:51.222\"\n        },\n        {\n            \"id\": 41,\n            \"title\": \"Ticket 11 created by admin2\",\n            \"description\": \"Description for ticket 11 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.221\",\n            \"updated_at\": \"2025-05-09T08:58:51.221\"\n        },\n        {\n            \"id\": 40,\n            \"title\": \"Ticket 10 created by admin2\",\n            \"description\": \"Description for ticket 10 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.219\",\n            \"updated_at\": \"2025-05-09T08:58:51.219\"\n        },\n        {\n            \"id\": 39,\n            \"title\": \"Ticket 9 created by admin2\",\n            \"description\": \"Description for ticket 9 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.217\",\n            \"updated_at\": \"2025-05-09T08:58:51.217\"\n        },\n        {\n            \"id\": 38,\n            \"title\": \"Ticket 8 created by admin2\",\n            \"description\": \"Description for ticket 8 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.216\",\n            \"updated_at\": \"2025-05-09T08:58:51.216\"\n        },\n        {\n            \"id\": 37,\n            \"title\": \"Ticket 7 created by admin2\",\n            \"description\": \"Description for ticket 7 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.215\",\n            \"updated_at\": \"2025-05-09T08:58:51.215\"\n        },\n        {\n            \"id\": 36,\n            \"title\": \"Ticket 6 created by admin2\",\n            \"description\": \"Description for ticket 6 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.214\",\n            \"updated_at\": \"2025-05-09T08:58:51.214\"\n        },\n        {\n            \"id\": 35,\n            \"title\": \"Ticket 5 created by admin2\",\n            \"description\": \"Description for ticket 5 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.213\",\n            \"updated_at\": \"2025-05-09T08:58:51.213\"\n        },\n        {\n            \"id\": 34,\n            \"title\": \"Ticket 4 created by admin2\",\n            \"description\": \"Description for ticket 4 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.212\",\n            \"updated_at\": \"2025-05-09T08:58:51.212\"\n        },\n        {\n            \"id\": 33,\n            \"title\": \"Ticket 3 created by admin2\",\n            \"description\": \"Description for ticket 3 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.211\",\n            \"updated_at\": \"2025-05-09T08:58:51.211\"\n        },\n        {\n            \"id\": 32,\n            \"title\": \"Ticket 2 created by admin2\",\n            \"description\": \"Description for ticket 2 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.210\",\n            \"updated_at\": \"2025-05-09T08:58:51.210\"\n        },\n        {\n            \"id\": 31,\n            \"title\": \"Ticket 1 created by admin2\",\n            \"description\": \"Description for ticket 1 created by admin2\",\n            \"created_at\": \"2025-05-09T08:58:51.209\",\n            \"updated_at\": \"2025-05-09T08:58:51.209\"\n        },\n        {\n            \"id\": 30,\n            \"title\": \"Ticket 30 created by admin1\",\n            \"description\": \"Description for ticket 30 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.207\",\n            \"updated_at\": \"2025-05-09T08:58:51.208\"\n        },\n        {\n            \"id\": 29,\n            \"title\": \"Ticket 29 created by admin1\",\n            \"description\": \"Description for ticket 29 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.206\",\n            \"updated_at\": \"2025-05-09T08:58:51.206\"\n        },\n        {\n            \"id\": 28,\n            \"title\": \"Ticket 28 created by admin1\",\n            \"description\": \"Description for ticket 28 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.205\",\n            \"updated_at\": \"2025-05-09T08:58:51.205\"\n        },\n        {\n            \"id\": 27,\n            \"title\": \"Ticket 27 created by admin1\",\n            \"description\": \"Description for ticket 27 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.203\",\n            \"updated_at\": \"2025-05-09T08:58:51.203\"\n        },\n        {\n            \"id\": 26,\n            \"title\": \"Ticket 26 created by admin1\",\n            \"description\": \"Description for ticket 26 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.202\",\n            \"updated_at\": \"2025-05-09T08:58:51.202\"\n        },\n        {\n            \"id\": 25,\n            \"title\": \"Ticket 25 created by admin1\",\n            \"description\": \"Description for ticket 25 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.200\",\n            \"updated_at\": \"2025-05-09T08:58:51.200\"\n        },\n        {\n            \"id\": 24,\n            \"title\": \"Ticket 24 created by admin1\",\n            \"description\": \"Description for ticket 24 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.199\",\n            \"updated_at\": \"2025-05-09T08:58:51.199\"\n        },\n        {\n            \"id\": 23,\n            \"title\": \"Ticket 23 created by admin1\",\n            \"description\": \"Description for ticket 23 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.198\",\n            \"updated_at\": \"2025-05-09T08:58:51.198\"\n        },\n        {\n            \"id\": 22,\n            \"title\": \"Ticket 22 created by admin1\",\n            \"description\": \"Description for ticket 22 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.197\",\n            \"updated_at\": \"2025-05-09T08:58:51.197\"\n        },\n        {\n            \"id\": 21,\n            \"title\": \"Ticket 21 created by admin1\",\n            \"description\": \"Description for ticket 21 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.196\",\n            \"updated_at\": \"2025-05-09T08:58:51.196\"\n        },\n        {\n            \"id\": 20,\n            \"title\": \"Ticket 20 created by admin1\",\n            \"description\": \"Description for ticket 20 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.195\",\n            \"updated_at\": \"2025-05-09T08:58:51.195\"\n        },\n        {\n            \"id\": 19,\n            \"title\": \"Ticket 19 created by admin1\",\n            \"description\": \"Description for ticket 19 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.194\",\n            \"updated_at\": \"2025-05-09T08:58:51.194\"\n        },\n        {\n            \"id\": 18,\n            \"title\": \"Ticket 18 created by admin1\",\n            \"description\": \"Description for ticket 18 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.193\",\n            \"updated_at\": \"2025-05-09T08:58:51.193\"\n        },\n        {\n            \"id\": 17,\n            \"title\": \"Ticket 17 created by admin1\",\n            \"description\": \"Description for ticket 17 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.191\",\n            \"updated_at\": \"2025-05-09T08:58:51.191\"\n        },\n        {\n            \"id\": 16,\n            \"title\": \"Ticket 16 created by admin1\",\n            \"description\": \"Description for ticket 16 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.190\",\n            \"updated_at\": \"2025-05-09T08:58:51.190\"\n        },\n        {\n            \"id\": 15,\n            \"title\": \"Ticket 15 created by admin1\",\n            \"description\": \"Description for ticket 15 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.189\",\n            \"updated_at\": \"2025-05-09T08:58:51.189\"\n        },\n        {\n            \"id\": 14,\n            \"title\": \"Ticket 14 created by admin1\",\n            \"description\": \"Description for ticket 14 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.187\",\n            \"updated_at\": \"2025-05-09T08:58:51.187\"\n        },\n        {\n            \"id\": 13,\n            \"title\": \"Ticket 13 created by admin1\",\n            \"description\": \"Description for ticket 13 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.186\",\n            \"updated_at\": \"2025-05-09T08:58:51.186\"\n        },\n        {\n            \"id\": 12,\n            \"title\": \"Ticket 12 created by admin1\",\n            \"description\": \"Description for ticket 12 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.184\",\n            \"updated_at\": \"2025-05-09T08:58:51.184\"\n        },\n        {\n            \"id\": 11,\n            \"title\": \"Ticket 11 created by admin1\",\n            \"description\": \"Description for ticket 11 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.183\",\n            \"updated_at\": \"2025-05-09T08:58:51.183\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"Ticket 10 created by admin1\",\n            \"description\": \"Description for ticket 10 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.182\",\n            \"updated_at\": \"2025-05-09T08:58:51.182\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"Ticket 9 created by admin1\",\n            \"description\": \"Description for ticket 9 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.181\",\n            \"updated_at\": \"2025-05-09T08:58:51.181\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"Ticket 8 created by admin1\",\n            \"description\": \"Description for ticket 8 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.180\",\n            \"updated_at\": \"2025-05-09T08:58:51.180\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Ticket 7 created by admin1\",\n            \"description\": \"Description for ticket 7 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.178\",\n            \"updated_at\": \"2025-05-09T08:58:51.178\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Ticket 6 created by admin1\",\n            \"description\": \"Description for ticket 6 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.177\",\n            \"updated_at\": \"2025-05-09T08:58:51.177\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Ticket 5 created by admin1\",\n            \"description\": \"Description for ticket 5 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.175\",\n            \"updated_at\": \"2025-05-09T08:58:51.175\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Ticket 4 created by admin1\",\n            \"description\": \"Description for ticket 4 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.174\",\n            \"updated_at\": \"2025-05-09T08:58:51.174\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Ticket 3 created by admin1\",\n            \"description\": \"Description for ticket 3 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.171\",\n            \"updated_at\": \"2025-05-09T08:58:51.171\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Ticket 2 created by admin1\",\n            \"description\": \"Description for ticket 2 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.170\",\n            \"updated_at\": \"2025-05-09T08:58:51.170\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"Ticket 1 created by admin1\",\n            \"description\": \"Description for ticket 1 created by admin1\",\n            \"created_at\": \"2025-05-09T08:58:51.167\",\n            \"updated_at\": \"2025-05-09T08:58:51.167\"\n        }\n    ],\n    \"message\": null\n}"
+								}
+							]
 						},
 						{
 							"name": "get by id",
@@ -1212,12 +1289,96 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "136"
+											"value": "150"
 										}
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "get by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-CSRFToken",
+												"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{server}}/admin/tickets/:id/",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"admin",
+												"tickets",
+												":id",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "150"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.27.5"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 08:59:36 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "222"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, PATCH, DELETE, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 150,\n        \"title\": \"Ticket 30 created by admin5\",\n        \"description\": \"Description for ticket 30 created by admin5\",\n        \"created_at\": \"2025-05-09T08:58:51.357\",\n        \"updated_at\": \"2025-05-09T08:58:51.357\"\n    },\n    \"message\": null\n}"
+								}
+							]
 						},
 						{
 							"name": "Create Ticket",
@@ -1264,7 +1425,93 @@
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "Create Ticket",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-CSRFToken",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"new ticket\",\n    \"description\": \"ticket description\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}/admin/tickets/",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"admin",
+												"tickets",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.27.5"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 08:59:52 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "70"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"ticket_id\": 151\n    },\n    \"message\": \"Ticket created successfully\"\n}"
+								}
+							]
 						},
 						{
 							"name": "Update Ticket",
@@ -1313,12 +1560,105 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "152"
+											"value": "1"
 										}
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "Update Ticket",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "X-CSRFToken",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"description\": \"updated description\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}/admin/tickets/:id/",
+											"host": [
+												"{{server}}"
+											],
+											"path": [
+												"admin",
+												"tickets",
+												":id",
+												""
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.27.5"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 May 2025 09:00:13 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "54"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, PATCH, DELETE, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {},\n    \"message\": \"Ticket updated successfully\"\n}"
+								}
+							]
 						},
 						{
 							"name": "Delete Ticket",
@@ -1358,7 +1698,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "152"
+											"value": "1"
 										}
 									]
 								}
@@ -1865,89 +2205,6 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"error\": \"Ticket not found\",\n    \"message\": null\n}"
-								},
-								{
-									"name": "get by id",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "X-CSRFToken",
-												"value": "ex8oe6UiN9RvRwQHtSBkwU7n8gPTml49",
-												"type": "text",
-												"disabled": true
-											}
-										],
-										"url": {
-											"raw": "{{server}}/agents/tickets/:id/",
-											"host": [
-												"{{server}}"
-											],
-											"path": [
-												"agents",
-												"tickets",
-												":id",
-												""
-											],
-											"variable": [
-												{
-													"key": "id",
-													"value": "155"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx/1.27.5"
-										},
-										{
-											"key": "Date",
-											"value": "Fri, 09 May 2025 06:07:50 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Content-Length",
-											"value": "138"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Vary",
-											"value": "Accept, Cookie"
-										},
-										{
-											"key": "Allow",
-											"value": "GET, HEAD, OPTIONS"
-										},
-										{
-											"key": "X-Frame-Options",
-											"value": "DENY"
-										},
-										{
-											"key": "X-Content-Type-Options",
-											"value": "nosniff"
-										},
-										{
-											"key": "Referrer-Policy",
-											"value": "same-origin"
-										},
-										{
-											"key": "Cross-Origin-Opener-Policy",
-											"value": "same-origin"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"data\": {\n        \"id\": 155,\n        \"title\": \"Ticket 3 created by admin1\",\n        \"description\": \"Description for ticket 3 created by admin1\"\n    },\n    \"message\": null\n}"
 								}
 							]
 						},
