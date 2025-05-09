@@ -30,6 +30,8 @@ class CustomerViewSet(APIView):
                 "id": customer.id,
                 "name": customer.name,
                 "email": customer.email,
+                "created_at": customer.created_at,
+                "updated_at": customer.updated_at,
             }
             for customer in customers
         ]
@@ -54,6 +56,8 @@ class CustomerByIdViewSet(APIView):
                 "id": customer.id,
                 "name": customer.name,
                 "email": customer.email,
+                "created_at": customer.created_at,
+                "updated_at": customer.updated_at,
             }
             return DataJsonResponse(customer_data)
 
